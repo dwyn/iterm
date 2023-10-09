@@ -1,26 +1,31 @@
 # Automatically Syncing iTerm2 Preferences with GitHub
 
 ## 1. Local Setup
-#!/bin/bash
+#!/bin/zsh
 
 - Initialize a git repository in the directory where your iTerm2 preferences are stored:
 
-  \```bash
+  \```zsh
   git init
   \```
 
 - Add your GitHub repository or gist as a remote:
 
-  \```bash
+  \```zsh
   git remote add origin [YOUR_GITHUB_REPO_URL]
   \```
 
 ## 2. Automate the Push
+# Automatically Syncing iTerm2 Preferences with GitHub
 
-- Create a script that detects changes in your iTerm2 preferences, commits those changes, and then pushes them to GitHub. Here's a basic script:
+...
 
-  \```bash
-  #!/bin/bash
+## 2. Automate the Push
+
+- Create a script that detects changes in your iTerm2 preferences, commits those changes, and then pushes them to GitHub. Here's the script for `zsh`:
+
+  \```zsh
+  #!/usr/bin/env zsh
 
   # Navigate to the directory containing iTerm2 preferences
   cd /path/to/iterm2/preferences/directory
@@ -38,11 +43,22 @@
   fi
   \```
 
+- Save the script to a file, for example, `update_iterm_prefs.zsh`.
+  
+- Make the script executable:
+
+  \```zsh
+  chmod +x update_iterm_prefs.zsh
+  \```
+
+...
+
+
 - Save the script to a file, for example, `update_iterm_prefs.sh`.
   
 - Make the script executable:
 
-  \```bash
+  \```zsh
   chmod +x update_iterm_prefs.sh
   \```
 
